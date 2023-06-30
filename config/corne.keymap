@@ -28,7 +28,7 @@
                 &trans   &kp A &kp S &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L   &kp SEMI  &trans
                 &trans   &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &trans
                 
-                &mo L_MOD &mo L_LOWER &kp SPACE    &kp LCTRL &mo L_UPPER &kp LALT
+                &mo L_MOD &mo L_LOWER &kp SPACE    &kp ENTER &mo L_UPPER &kp BACKSPACE
             >;
         };
         lower_layer {
