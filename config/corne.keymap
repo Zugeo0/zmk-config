@@ -60,7 +60,7 @@
             bindings = <
 &none  &none  &none  &none          &none        &none     &none   &none       &none            &none  &none   &none
 &none  &none  &none  &kp HOME       &kp END      &none     &none   &kp INSERT  &kp PRINTSCREEN  &none  &none   &none
-&none  &none  &none  &none          &none        &none     &none   &none       &none            &none  &trans  &none
+&none  &none  &none  &none          &none        &none     &none   &none       &none            &none  &tog 2  &none
                      &kp PAGE_DOWN  &kp PAGE_UP  &trans    &trans  &trans      &trans
             >;
 
