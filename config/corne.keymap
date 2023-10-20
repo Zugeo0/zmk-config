@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define L_LOWER   1
 #define L_UPPER   2
@@ -23,14 +23,15 @@
             // |      |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,   |  .  |  /  |     |
             //
             //                    | MOD | LWR | SPC |   | ENT | RSE  | BKSP |
+
             bindings = <
-                &trans   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O   &kp P     &trans
-                &trans   &kp A &kp S &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L   &kp SEMI  &trans
-                &trans   &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &trans
-                
-                &mo L_MOD &mo L_LOWER &kp SPACE    &kp ENTER &mo L_UPPER &kp BACKSPACE
+&none  &kp Q  &kp W  &kp E      &kp R      &kp T    &kp Y      &kp U          &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D      &kp F      &kp G    &kp H      &kp J          &kp K      &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &kp C      &kp V      &kp B    &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &mo L_MOD  &kp SPACE  &mo 1    &kp ENTER  &kp BACKSPACE  &mo 2
             >;
         };
+
         lower_layer {
             // -----------------------------------------------------------------------------------------
             // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8   |  9  |  0  |      |
@@ -38,12 +39,12 @@
             // |      | BT1 | BT2 | BT3 | BT4 | CLR |   |     |     |      |     | ESC |      |
             //
             //                    |     |     |     |   |     |     |      |
+
             bindings = <
-                &trans  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0     &trans
-                &trans  &trans       &trans       &trans       &trans       &trans       &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DELETE &trans
-                &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &trans   &trans   &trans &trans    &kp ESCAPE &trans
-                
-                &trans &trans &trans      &trans &trans &trans
+&trans  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6    &kp N7    &kp N8  &kp N9     &kp N0      &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DELETE  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &trans    &trans    &trans  &trans     &kp ESCAPE  &trans
+                                    &trans        &trans        &trans        &trans    &trans    &trans
             >;
         };
 
@@ -54,14 +55,15 @@
             // |      |     |     |     |  '  |  ~  |   |  _  |  +  |  {  |  }  |  ?  |       |
             //
             //                    |     |     | TAB |   |     |     |     |
+
             bindings = <
-                &trans  &kp EXCL &kp AT &kp HASH &kp DLLR         &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR     &trans
-                &trans  &trans   &trans &trans   &kp PIPE         &kp GRAVE   &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH     &trans
-                &trans  &trans   &trans &trans   &kp SINGLE_QUOTE &kp TILDE   &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp QUESTION &trans
-                
-                &trans &trans &kp TAB    &trans &trans &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR          &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR      &trans
+&trans  &trans    &trans  &trans    &kp PIPE          &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH      &trans
+&trans  &trans    &trans  &trans    &kp SINGLE_QUOTE  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp QUESTION  &trans
+                          &trans    &trans            &kp TAB      &trans     &trans     &trans
             >;
         };
+
         mod_layer {
             // -----------------------------------------------------------------------------------------
             // |      |       |     |      |      |     |   |     |      |      |     |       |       |
@@ -69,12 +71,12 @@
             // |      |       |     |      |      |     |   |     |      |      |     |       |       |
             //
             //                      |      |      |     |   |     |      |      |
+
             bindings = <
-                &trans  &trans   &trans   &trans    &trans     &trans    &trans &trans     &trans    &trans   &trans    &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans    &trans &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI  &trans
-                &trans  &trans   &trans   &trans    &trans     &trans    &trans &trans     &trans    &trans   &trans    &trans
-                
-                &trans &trans &trans      &trans &trans &trans
+&trans  &trans    &trans    &trans     &trans      &trans    &trans  &trans      &trans     &trans    &trans    &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans    &trans  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &trans    &trans    &trans     &trans      &trans    &trans  &trans      &trans     &trans    &trans    &trans
+                            &trans     &trans      &trans    &trans  &trans      &trans
             >;
         };
     };
